@@ -85,5 +85,5 @@ def update_output(n_clicks, ticker, period):
 
 # Run the app
 if __name__ == "__main__":
-    app.run_server(mode="inline", port=8054)
+    app.run_server()
 
