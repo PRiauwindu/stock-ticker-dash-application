@@ -1,26 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul 25 12:39:50 2023
 
-# # Dash Application
-
-# This application takes stock ticker as used in US stock market and return the timeseries chart of the stock closing price along with descriptive statistics for all of the parameters recorded.
-
-# In[2]:
-
+@author: putra
+"""
 
 import yfinance as yf
 import pandas as pd
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash import dash_table
 from dash.dependencies import Input, Output
 from IPython.display import display
-import warnings
-warnings.filterwarnings("ignore")
 
 # Create Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Define the layout
 app.layout = html.Div([
@@ -86,4 +82,3 @@ def update_output(n_clicks, ticker, period):
 # Run the app
 if __name__ == "__main__":
     app.run_server()
-
