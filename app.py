@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 25 12:39:50 2023
-
-@author: putra
-"""
-
 import yfinance as yf
 import pandas as pd
 import dash
@@ -81,4 +74,4 @@ def update_output(n_clicks, ticker, period):
 
 # Run the app
 if __name__ == "__main__":
-    app.run_server()
+    app.run_server(debug=False)
